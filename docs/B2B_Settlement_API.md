@@ -42,8 +42,8 @@ Content-Type: application/json
   "success": true,
   "data": {
     "businessId": "biz_abc123def456",
-    "apiKey": "fngn_xyz789abc123",
-    "custodialWallet": "0x1234567890abcdef1234567890abcdef12345678",
+    "apiKey": "your_api_key_here",
+    "custodialWallet": "0x742d35Cc6635C0532925a3b8D0007d2e5e0f5e6f7",
     "status": "pending_approval",
     "dailyLimit": 1000000,
     "monthlyLimit": 10000000
@@ -94,7 +94,7 @@ X-API-Key: your_api_key
     "fee": 500,
     "netAmount": 49500,
     "reference": "INV_2025_001234",
-    "blockchainTxHash": "0x1a2b3c4d5e6f7890abcdef1234567890abcdef1234567890abcdef1234567890",
+    "blockchainTxHash": "0x8f3a2b1c9d4e5f6789abcdef0123456789abcdef0123456789abcdef0123456789",
     "estimatedSettlement": "2025-01-27T15:35:00Z"
   }
 }
@@ -191,7 +191,7 @@ Content-Type: application/json
 
 {
   "amount": 50000,
-  "recipient": "0x1234567890abcdef1234567890abcdef12345678"
+  "recipient": "0x742d35Cc6635C0532925a3b8D0007d2e5e0f5e6f7"
 }
 ```
 
@@ -232,7 +232,7 @@ X-API-Key: your_api_key
     "toBusinessId": "biz_recipient_456",
     "reference": "INV_2025_001234",
     "description": "Payment for services",
-    "blockchainTxHash": "0x1a2b3c4d5e6f7890abcdef1234567890abcdef1234567890abcdef1234567890",
+    "blockchainTxHash": "0x8f3a2b1c9d4e5f6789abcdef0123456789abcdef0123456789abcdef0123456789",
     "createdAt": "2025-01-27T14:30:00Z",
     "completedAt": "2025-01-27T14:30:15Z",
     "metadata": {

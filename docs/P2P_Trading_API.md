@@ -47,7 +47,7 @@ X-API-Key: api_key
   "maxAmount": 100000,
   "totalAmount": 50000,
   "paymentMethods": ["Bank Transfer", "Mobile Money"],
-  "instructions": "Transfer to Account: 1234567890 (Access Bank)",
+  "instructions": "Transfer to Account: [Your Account Number] (Access Bank)",
   "expiresAt": "2025-01-28T00:00:00Z"
 }
 ```
@@ -88,7 +88,7 @@ const advertisement = await p2pClient.advertisements.create({
   minAmount: 100, // $100 minimum
   maxAmount: 10000, // $10,000 maximum
   paymentMethods: ['Wire Transfer', 'International Bank Transfer'],
-  instructions: 'Wire to: Bank of America, Account: 123456789, SWIFT: BOFAUS3N',
+  instructions: 'Wire to: Bank of America, Account: [Your Account], SWIFT: [Your SWIFT Code]',
   supportedCountries: ['US', 'CA', 'GB', 'DE'], // Accept from these countries
   region: 'North America'
 });
@@ -184,7 +184,7 @@ X-API-Key: api_key
     "amount": 25000,
     "rate": 750.50,
     "totalValue": 18762.50,
-    "paymentInstructions": "Transfer ₦18,762.50 to Account: 1234567890",
+    "paymentInstructions": "Transfer ₦18,762.50 to Account: [Your Account Number]",
     "expiresAt": "2025-01-27T15:30:00Z",
     "escrowAmount": 25000
   }
@@ -256,9 +256,9 @@ const bankTrade = await p2pClient.advertisements.create({
   paymentMethods: ['Bank Transfer'],
   bankDetails: {
     bankName: 'Access Bank',
-    accountNumber: '1234567890',
+    accountNumber: '[Your Account Number]',
     accountName: 'John Doe Trading',
-    routingNumber: '044' // Nigerian bank code
+    routingNumber: '[Your Bank Code]' // Nigerian bank code
   },
   instructions: `
     1. Transfer exact amount to provided account
@@ -445,8 +445,8 @@ const internationalTrade = await p2pClient.trades.create({
   settlementInstructions: {
     intermediaryBank: 'Chase Bank',
     correspondentBank: 'Access Bank Nigeria',
-    beneficiaryAccount: '1234567890',
-    swiftCode: 'FCBKNGLAXXX'
+    beneficiaryAccount: '[Your Account Number]',
+    swiftCode: '[Your SWIFT Code]'
   }
 });
 

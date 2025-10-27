@@ -81,8 +81,8 @@ Content-Type: application/json
   "success": true,
   "data": {
     "businessId": "biz_abc123",
-    "apiKey": "fngn_xyz789",
-    "custodialWallet": "0x1234...5678"
+    "apiKey": "your_business_api_key",
+    "custodialWallet": "0x742d35Cc6635C0532925a3b8D0007d2e5e0f5e6f7"
   }
 }
 ```

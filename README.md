@@ -2,8 +2,6 @@
 
 This repository contains the public documentation, examples, and integration guides for the FSPay fintech platform.
 
-> **⚠️ Important Notice**: This is the **public documentation repository**. The main application source code is in a [private repository](https://github.com/SopeDapo/FSPay_All-in-One) to protect sensitive business logic and user data.
-
 ## 📚 What's Available Here
 
 ✅ **API Documentation** - Complete endpoint reference with examples
@@ -11,7 +9,6 @@ This repository contains the public documentation, examples, and integration gui
 ✅ **Code Examples** - Safe examples in multiple programming languages
 ✅ **Best Practices** - Security and implementation guidelines
 ✅ **SDK Resources** - Information about official and community SDKs
-❌ **Source Code** - Not available in this public repository
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)](https://reactjs.org/)
@@ -114,21 +111,6 @@ fspay-public/                    # Public Documentation Repository
     ├── php/                  # PHP examples (coming soon)
     ├── curl/                 # Command-line API testing
     └── README.md             # Examples overview
-```
-
-## 🔧 Integration Tools
-
-```bash
-# Serve documentation locally
-npm run docs:serve        # View docs with local server
-
-# Validate documentation
-npm run validate          # Check documentation integrity
-
-# Test examples
-npm run examples:test     # Run integration examples
-```
-
 ## 📚 Documentation Index
 
 - **[API Documentation](./docs/API_Documentation.md)** - Complete public API reference
