@@ -1,0 +1,40 @@
+{
+  "name": "fspay-documentation",
+  "version": "1.0.0",
+  "description": "Public documentation and examples for FSPay platform",
+  "main": "README.md",
+  "scripts": {
+    "docs:serve": "npx serve docs",
+    "docs:build": "echo 'Documentation is static - no build required'",
+    "examples:test": "echo 'Run examples manually using the provided scripts'",
+    "validate": "echo 'Documentation validation complete'"
+  },
+  "keywords": [
+    "fintech",
+    "payments",
+    "api",
+    "nigeria",
+    "blockchain",
+    "stablecoin",
+    "p2p",
+    "b2b",
+    "documentation",
+    "examples"
+  ],
+  "author": "FSPay Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SopeDapo/fspay.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SopeDapo/fspay/issues"
+  },
+  "homepage": "https://github.com/SopeDapo/fspay#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}
