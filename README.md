@@ -26,7 +26,9 @@ FSPay provides developers with comprehensive APIs and tools to integrate fintech
 - **RESTful API Reference** with detailed endpoint documentation
 - **Code Examples** in JavaScript, Python, PHP, and cURL
 - **Integration Guides** for common use cases
-- **Webhook Documentation** for real-time event handling
+- **Blockchain Integration** with smart contract interfaces
+- **Stablecoin Operations** (FNGN - Nigerian Naira pegged)
+- **FNGN Stablecoin System** - Nigerian Naira-pegged cryptocurrency for cross-border payments
 - **Best Practices** for security and performance
 - **SDK Information** for popular programming languages
 
@@ -54,11 +56,23 @@ FSPay offers a comprehensive suite of fintech services:
 - **Instant Processing**: Real-time transaction completion
 - **Receipt Generation**: Digital receipts for all transactions
 
+### 🌐 Blockchain & Stablecoin
+- **FNGN Stablecoin**: 1:1 Nigerian Naira pegged cryptocurrency
+- **Multi-Chain Support**: Ethereum, BSC, and other blockchain networks
+- **Cross-Border Transfers**: International payments with blockchain speed
+- **Proof of Reserve**: Real-time transparency and auditability
+
 ### 🏢 Business Solutions
 - **B2B Payment Gateway**: Business-to-business payment processing
 - **Vendor Marketplace**: Platform for service providers
 - **API Integration**: RESTful APIs for seamless integration
 - **Webhook Notifications**: Real-time transaction updates
+
+### 🔄 P2P Trading
+- **Global Exchange**: Trade between fiat currencies and stablecoins
+- **Escrow Protection**: Smart contract security for all trades
+- **Multi-Payment Methods**: Bank transfers, mobile money, and digital wallets
+- **Cross-Border Trading**: International trading with local settlement
 
 ### 🔐 Security & Compliance
 - **Multi-Jurisdiction Support**: Nigeria and international markets
@@ -66,85 +80,34 @@ FSPay offers a comprehensive suite of fintech services:
 - **Audit Trails**: Comprehensive transaction logging
 - **Data Protection**: Industry-standard security measures
 
-## 🚀 Quick Start
-
-### 1. Get API Access
-Contact our developer relations team:
-- **Email**: developers@fspay.ng
-- **Subject**: "API Access Request - [Your Company Name]"
-- **Include**: Your use case and integration requirements
-
-### 2. Explore Documentation
-```bash
-# Clone this repository
-git clone https://github.com/SopeDapo/fspay.git
-cd fspay
-
-# View API documentation
-cat docs/API_Documentation.md
-
-# Try code examples
-cd examples/javascript
-npm install  # if needed
-node fspay-api.js
-```
-
-### 3. Test Integration
-Use our sandbox environment for testing:
-- **Base URL**: `https://api-sandbox.fspay.ng`
-- **Test Credentials**: Provided after API approval
-- **No Real Money**: Sandbox uses test funds only
-
-## ⚙️ API Configuration
-
-### Environment Setup
-Create a `.env` file for your integration:
+## 🔧 Integration Tools
 
 ```bash
-# FSPay API Configuration
-FSPAY_API_KEY=your_api_key_here
-FSPAY_API_SECRET=your_api_secret_here
-FSPAY_BASE_URL=https://api-sandbox.fspay.ng
+# Serve documentation locally
+npm run docs:serve        # View docs with local server
 
-# Webhook Configuration
-FSPAY_WEBHOOK_SECRET=your_webhook_secret_here
-WEBHOOK_URL=https://your-app.com/webhooks/fspay
+# Validate documentation
+npm run validate          # Check documentation integrity
 
-# Application Details
-APP_NAME=Your App Name
-APP_VERSION=1.0.0
-```
-
-### Basic API Usage
-```javascript
-const API_KEY = process.env.FSPAY_API_KEY;
-const BASE_URL = process.env.FSPAY_BASE_URL;
-
-async function makeAPICall(endpoint, data = {}) {
-  const response = await fetch(`${BASE_URL}${endpoint}`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-API-Key': API_KEY,
-      'Authorization': `Bearer ${userToken}` // if authenticated
-    },
-    body: JSON.stringify(data)
-  });
-
-  return response.json();
-}
+# Test examples
+npm run examples:test     # Run integration examples
 ```
 
 ## 📁 Project Structure
 
 ```
 fspay-public/                    # Public Documentation Repository
-├── README.md                   # This file - integration guide
+├── README.md                   # Integration guide & overview
 ├── LICENSE                     # MIT License
 ├── package.json               # Documentation tooling
 ├── .gitignore                 # Security rules
-├── docs/                      # Safe documentation
-│   └── API_Documentation.md   # Public API reference
+├── docs/                      # Comprehensive documentation
+│   ├── API_Documentation.md   # Public API reference
+│   ├── B2B_Settlement_API.md  # Business payment processing
+│   ├── P2P_Trading_API.md      # P2P trading platform
+│   ├── FNGN_Stablecoin_System.md # Blockchain and stablecoin architecture
+│   ├── Smart_Contract_Interface.md # Blockchain integration
+│   └── Stablecoin_Blockchain_Gateway.md # Cross-border payments
 └── examples/                  # Safe integration examples
     ├── javascript/            # Node.js examples
     ├── python/               # Python examples (coming soon)
@@ -153,53 +116,6 @@ fspay-public/                    # Public Documentation Repository
     └── README.md             # Examples overview
 ```
 
-## 🚀 Quick Start
-
-### 1. Get API Access
-Contact our developer relations team:
-- **Email**: developers@fspay.ng
-- **Subject**: "API Access Request - [Your Company Name]"
-- **Include**: Your use case and integration requirements
-
-### 2. Explore Documentation
-```bash
-# Clone this repository
-git clone https://github.com/SopeDapo/fspay.git
-cd fspay
-
-# View API documentation
-cat docs/API_Documentation.md
-
-# Try code examples
-cd examples/javascript
-npm install  # if needed
-node fspay-api.js
-```
-
-### 3. Test Integration
-Use our sandbox environment for testing:
-- **Base URL**: `https://api-sandbox.fspay.ng`
-- **Test Credentials**: Provided after API approval
-- **No Real Money**: Sandbox uses test funds only
-
-## ⚙️ API Configuration
-
-### Environment Setup
-Create a `.env` file for your integration:
-
-```bash
-# FSPay API Configuration
-FSPAY_API_KEY=your_api_key_here
-FSPAY_API_SECRET=your_api_secret_here
-FSPAY_BASE_URL=https://api-sandbox.fspay.ng
-
-# Webhook Configuration
-FSPAY_WEBHOOK_SECRET=your_webhook_secret_here
-WEBHOOK_URL=https://your-app.com/webhooks/fspay
-
-# Application Details
-APP_NAME=Your App Name
-APP_VERSION=1.0.0
 ## 🔧 Integration Tools
 
 ```bash
@@ -216,6 +132,11 @@ npm run examples:test     # Run integration examples
 ## 📚 Documentation Index
 
 - **[API Documentation](./docs/API_Documentation.md)** - Complete public API reference
+- **[B2B Settlement API](./docs/B2B_Settlement_API.md)** - Business payment processing
+- **[P2P Trading API](./docs/P2P_Trading_API.md)** - Peer-to-peer trading platform
+- **[FNGN Stablecoin System](./docs/FNGN_Stablecoin_System.md)** - Blockchain and stablecoin architecture
+- **[Smart Contract Interface](./docs/Smart_Contract_Interface.md)** - Blockchain integration
+- **[Stablecoin & Gateway](./docs/Stablecoin_Blockchain_Gateway.md)** - Cross-border payments
 - **[JavaScript Examples](./examples/javascript/)** - Node.js integration examples
 - **[cURL Examples](./examples/curl/)** - Command-line API testing
 - **[Python Examples](./examples/python/)** - Python integration examples (coming soon)
