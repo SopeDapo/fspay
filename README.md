@@ -44,116 +44,113 @@ FSPay provides developers with comprehensive APIs and tools to integrate fintech
 - **Sandbox Environment** for safe testing
 - **Comprehensive Error Handling** with detailed responses
 
-## ✨ Key Features
+## ✨ Platform Capabilities
+
+FSPay offers a comprehensive suite of fintech services:
 
 ### 💳 Payment Services
-- **Airtime & Data**: Purchase airtime and data bundles for all Nigerian networks (MTN, Airtel, Glo, 9Mobile)
-- **Electricity Bills**: Pay electricity bills across all Nigerian distribution companies
-- **Cable TV**: Subscribe to DSTV, GOTV, and StarTimes packages
-- **Betting**: Fund betting wallets for platforms like Bet9ja, BetKing, SportyBet
-- **Education**: Pay for WAEC, JAMB, NECO registrations and services
-- **ISP Services**: Data bundles for Smile, Spectranet, Swift, and other ISPs
+- **Bill Payments**: Airtime, data, electricity, cable TV, and internet services
+- **Multi-Network Support**: All major Nigerian telecom providers
+- **Instant Processing**: Real-time transaction completion
+- **Receipt Generation**: Digital receipts for all transactions
 
 ### 🏢 Business Solutions
-- **B2B Payment Gateway**: Non-custodial payment processing for businesses
-- **Smart Contract Escrow**: Automated payment protection without custodial risk
-- **Vendor Management**: Platform for service providers and vendors
-- **API Services**: Comprehensive REST API for integrations
-- **Webhook Support**: Real-time transaction notifications
-- **Partner Integration**: SafeHaven MFB, Paystack, Monnify, and other partners
-
-### 🏦 Financial Services
-- **Multi-Wallet Support**: Traditional banking and cryptocurrency wallets
-- **Virtual Cards**: Generate and manage virtual payment cards
-- **Points System**: Earn and redeem points for transactions and referrals
-- **Cross-Border Payments**: International money transfers and payments
-- **Banking Integration**: Virtual accounts and banking partnerships
-
-### 🔄 P2P Trading Platform
-- **Advertisement System**: Create buy/sell ads for crypto and stablecoins
-- **Escrow Protection**: Smart contract-based escrow for secure trades
-- **Trade Chat**: In-app messaging system for trade communication
-- **Dispute Resolution**: Built-in dispute handling and resolution
-- **Rating System**: User reputation and review system
-- **Multi-Currency Trading**: Support for NGN, USD, EUR, GBP and various stablecoins
-
-### 🏪 Vendor Marketplace
-- **Vendor Applications**: Multi-step application process for vendors
-- **Vendor Dashboard**: Complete vendor management interface
-- **Performance Metrics**: Trading volume, ratings, and analytics
-- **Liquidity Management**: Vendor liquidity and balance management
-- **Review System**: Customer reviews and ratings for vendors
-- **Compliance Management**: KYC and regulatory compliance for vendors
+- **B2B Payment Gateway**: Business-to-business payment processing
+- **Vendor Marketplace**: Platform for service providers
+- **API Integration**: RESTful APIs for seamless integration
+- **Webhook Notifications**: Real-time transaction updates
 
 ### 🔐 Security & Compliance
-- **KYC Management**: Multi-tier KYC verification system
-- **AML Monitoring**: Anti-money laundering compliance
-- **Regulatory Compliance**: Support for multiple jurisdictions and regulatory frameworks
-- **Multi-Jurisdiction Support**: Nigeria, Africa, Europe, Americas, Asia, International
-- **Audit Trails**: Comprehensive transaction logging and monitoring
+- **Multi-Jurisdiction Support**: Nigeria and international markets
+- **KYC/AML Compliance**: Regulatory compliance framework
+- **Audit Trails**: Comprehensive transaction logging
+- **Data Protection**: Industry-standard security measures
 
-### 🛠️ Development Tools
-- **SMS Testing**: Development environment for SMS functionality testing
-- **B2B Testing**: Comprehensive B2B API testing tools
-- **Feature Flags**: Dynamic feature activation and management
-- **System Configuration**: Real-time system configuration management
-- **Admin Tools**: Complete admin toolkit for platform management
+## 🚀 Quick Start
 
-### Tech Stack
+### 1. Get API Access
+Contact our developer relations team:
+- **Email**: developers@fspay.ng
+- **Subject**: "API Access Request - [Your Company Name]"
+- **Include**: Your use case and integration requirements
 
-#### Frontend
-- **Framework**: React 18 with TypeScript
-- **Routing**: Wouter for client-side routing
-- **State Management**: TanStack Query for server state
-- **UI Components**: Radix UI with Tailwind CSS
-- **Styling**: Tailwind CSS with custom animations
-- **PWA Support**: Service workers and offline capabilities
+### 2. Explore Documentation
+```bash
+# Clone this repository
+git clone https://github.com/SopeDapo/fspay.git
+cd fspay
 
-#### Backend
-- **Runtime**: Node.js with TypeScript
-- **Framework**: Express.js with middleware architecture
-- **Database**: PostgreSQL with Drizzle ORM
-- **Authentication**: JWT with OAuth integration (Google, Twitter)
-- **Session Management**: Express sessions with Redis support
-- **File Uploads**: Multer for file handling
+# View API documentation
+cat docs/API_Documentation.md
 
-#### Blockchain Integration
-- **Multi-Chain Support**: Ethereum, BSC, Polygon, Bitcoin, Tron networks
-- **Stablecoin**: FNGN ERC-20 token implementation
-- **Wallet Management**: HD wallet generation and encryption
-- **Transaction Monitoring**: Real-time blockchain transaction tracking
-- **Bitcoin Support**: BTC wallet creation and transaction management
-- **Tron Integration**: TRX wallet and smart contract support
+# Try code examples
+cd examples/javascript
+npm install  # if needed
+node fspay-api.js
+```
 
-#### External Integrations
-- **Payment Gateways**: Paystack, Flutterwave, Monnify, Payscribe
-- **Banking APIs**: SafeHaven MFB and other Nigerian banks
-- **SMS/Email Services**: Multi-channel notification system
-- **Geolocation Services**: IP detection and fraud prevention
-- **VPN/Proxy Detection**: Advanced fraud prevention and security
-- **Blockchain Oracles**: Real-time price feeds and data
-- **KYC Services**: Identity verification and compliance tools
+### 3. Test Integration
+Use our sandbox environment for testing:
+- **Base URL**: `https://api-sandbox.fspay.ng`
+- **Test Credentials**: Provided after API approval
+- **No Real Money**: Sandbox uses test funds only
+
+## ⚙️ API Configuration
+
+### Environment Setup
+Create a `.env` file for your integration:
+
+```bash
+# FSPay API Configuration
+FSPAY_API_KEY=your_api_key_here
+FSPAY_API_SECRET=your_api_secret_here
+FSPAY_BASE_URL=https://api-sandbox.fspay.ng
+
+# Webhook Configuration
+FSPAY_WEBHOOK_SECRET=your_webhook_secret_here
+WEBHOOK_URL=https://your-app.com/webhooks/fspay
+
+# Application Details
+APP_NAME=Your App Name
+APP_VERSION=1.0.0
+```
+
+### Basic API Usage
+```javascript
+const API_KEY = process.env.FSPAY_API_KEY;
+const BASE_URL = process.env.FSPAY_BASE_URL;
+
+async function makeAPICall(endpoint, data = {}) {
+  const response = await fetch(`${BASE_URL}${endpoint}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-API-Key': API_KEY,
+      'Authorization': `Bearer ${userToken}` // if authenticated
+    },
+    body: JSON.stringify(data)
+  });
+
+  return response.json();
+}
+```
 
 ## 📁 Project Structure
 
 ```
 fspay-public/                    # Public Documentation Repository
 ├── README.md                   # This file - integration guide
+├── LICENSE                     # MIT License
 ├── package.json               # Documentation tooling
-├── .gitignore                 # Security and cleanup rules
-├── docs/                      # Comprehensive documentation
-│   ├── API_Documentation.md   # Complete API reference
-│   ├── B2B_API_Guide.md       # B2B integration guide
-│   ├── IMPLEMENTATION_ROADMAP.md # Platform roadmap
-│   └── VENDOR_API_SPECIFICATION.md # Vendor integration
-├── examples/                  # Safe integration examples
-│   ├── javascript/            # Node.js/JavaScript examples
-│   ├── python/               # Python SDK examples
-│   ├── php/                  # PHP integration examples
-│   ├── curl/                 # Command-line API testing
-│   └── README.md             # Examples overview
-└── marketing/                # Public marketing materials
-    └── social_media_tweets.md # Social media content
+├── .gitignore                 # Security rules
+├── docs/                      # Safe documentation
+│   └── API_Documentation.md   # Public API reference
+└── examples/                  # Safe integration examples
+    ├── javascript/            # Node.js examples
+    ├── python/               # Python examples (coming soon)
+    ├── php/                  # PHP examples (coming soon)
+    ├── curl/                 # Command-line API testing
+    └── README.md             # Examples overview
 ```
 
 ## 🚀 Quick Start
@@ -203,34 +200,6 @@ WEBHOOK_URL=https://your-app.com/webhooks/fspay
 # Application Details
 APP_NAME=Your App Name
 APP_VERSION=1.0.0
-## 🔧 Available Scripts
-
-```bash
-# View documentation
-npm run docs:serve        # Serve documentation locally
-npm run docs:build        # Build documentation (if applicable)
-
-# Run examples
-npm run examples:test     # Test integration examples
-npm run validate          # Validate documentation
-```
-
-## 🌐 API Endpoints Overview
-
-### Core Services
-- **Authentication**: `/api/auth/*` - Login and OAuth endpoints
-- **Wallet Services**: `/api/wallet/*` - Balance and transaction management
-- **Bill Payments**: `/api/airtime`, `/api/data`, `/api/electricity`, `/api/cable`
-- **Virtual Cards**: `/api/virtual-cards/*` - Card creation and management
-
-### Advanced Features
-- **P2P Trading**: `/api/p2p/*` - Peer-to-peer trading platform
-- **B2B Services**: `/api/b2b/*` - Business payment processing
-- **Vendor Services**: `/api/vendor/*` - Marketplace vendor tools
-- **Stablecoin Operations**: `/api/stablecoin/*` - FNGN token management
-
-For complete API reference, see `docs/API_Documentation.md`.
-
 ## 🔧 Integration Tools
 
 ```bash
@@ -246,11 +215,11 @@ npm run examples:test     # Run integration examples
 
 ## 📚 Documentation Index
 
-- **[API Documentation](./docs/API_Documentation.md)** - Complete API reference
-- **[B2B Integration Guide](./docs/B2B_API_Guide.md)** - Business integration
-- **[Implementation Roadmap](./docs/IMPLEMENTATION_ROADMAP.md)** - Platform features
-- **[Vendor API Specification](./docs/VENDOR_API_SPECIFICATION.md)** - Vendor integration
-- **[Code Examples](./examples/)** - Integration examples in multiple languages
+- **[API Documentation](./docs/API_Documentation.md)** - Complete public API reference
+- **[JavaScript Examples](./examples/javascript/)** - Node.js integration examples
+- **[cURL Examples](./examples/curl/)** - Command-line API testing
+- **[Python Examples](./examples/python/)** - Python integration examples (coming soon)
+- **[PHP Examples](./examples/php/)** - PHP integration examples (coming soon)
 
 ## 🔐 Security & Best Practices
 
